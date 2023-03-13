@@ -20,7 +20,7 @@ h2{
   font-size: 30px;
 }
 .signup{
-  width: 40%;
+  width: 350px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -29,7 +29,7 @@ h2{
   margin: 5px auto;
   padding: 10px;
   background-color: #333;
-  border-radius: 70px;
+  border-radius: 25px;
   box-shadow: 0 0 25px rgba(128, 128, 128, 0.486);
 }
 .signup form{
