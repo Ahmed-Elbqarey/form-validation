@@ -1,31 +1,49 @@
-let name = document.getElementById("name");
+let user = document.getElementById("username");
 let email = document.getElementById("email");
-let pass = document.getElementById("pass");
+let password = document.getElementById("password");
 let submit = document.getElementById("submit");
+let input = document.querySelector("input");
 
-submit.onclick = function () {
-  if (name.value[0] == name.value[0].toUpperCase()) {
-    document.write("Valid UserName  ");
-  } else {
-    document.write("The First Later Of User Name Must Be UpperCase! ");
-  }
-  validEmail();
-  validPass();
-};
-
-function validEmail() {
-  if (email.value.indexOf("@") != -1) {
-    document.write("Valid Email  ");
-  } else {
-    document.write("Not Valid Email! You Should Type @ ");
-  }
-}
-
-function validPass() {
-  pass = pass.value.toString();
-  if (pass.length >= 8) {
-    document.write("Valid Password");
-  } else {
-    document.write("Password Must be More Thane 8 Number!");
+function valid(id) {
+  if (id == "username") {
+    if (user.value == "") {
+      user.style.borderColor = "red";
+    } else if (user.value[0].includes("<")) {
+      user.style.borderColor = "red";
+    } else if (user.value[0].includes(">")) {
+      user.style.borderColor = "red";
+    } else if (user.value[0].includes("$")) {
+      user.style.borderColor = "red";
+    } else if (user.value[0].includes("!")) {
+      user.style.borderColor = "red";
+    } else {
+      user.style.borderColor = "green ";
+    }
+  } else if (id == "email") {
+    if (email.value == "") {
+      email.style.borderColor = "red";
+    } else if (email.value[0] == "@") {
+      email.style.borderColor = "red";
+    } else if (email.value[0] == "<") {
+      email.style.borderColor = "red";
+    } else if (email.value[0] == ">") {
+      email.style.borderColor = "red";
+    } else if (email.value[0] == "$") {
+      email.style.borderColor = "red";
+    } else if (!email.value.includes("@")) {
+      email.style.borderColor = "red";
+    } else if (!email.value.includes(".com")) {
+      email.style.borderColor = "red";
+    } else {
+      email.style.borderColor = "green";
+    }
+  } else if (id == "password") {
+    if (password.value == "") {
+      password.style.borderColor = "red";
+    } else if (password.value.length < 8) {
+      password.style.borderColor = "red";
+    } else {
+      password.style.borderColor = "green";
+    }
   }
 }

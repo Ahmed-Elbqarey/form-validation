@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>signup</title>
-  <link rel="stylesheet" href="signup-style.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>the first later of user name must be upperCase</h2>
-  <h2>email must have @</h2>
-  <h2>password must be more thane 8 number</h2>
-  <div class="signup">
-    <form>
-      <input type="text" placeholder="name" name="first-name" id="name">
-      <input type="text" placeholder="email" name="email" id="email">
-      <input type="password" placeholder="password" id="pass">
-      <button type="submit" id="submit">signup</button>
-    </form>
-  </div>
+  
+<div class="container">
+  <label for="username">enter your username</label>
+  <input type="text" id="username" autocomplete="off" onkeyup="valid(this.id)">
+  <label for="email">enter your email</label>
+  <input type="text" id="email" autocomplete="off" onkeyup="valid(this.id)">
+  <label for="password">enter your password</label>
+  <input type="number" id="password" autocomplete="off" onkeyup="valid(this.id)">
+  <button id="submit">submit</button>
+</div>
+
 
 
   <script src="main.js"></script>
